@@ -1,2 +1,2 @@
 #MY APP, 
-This is my app.
+Just a silly Rock Paper Scissors game 
