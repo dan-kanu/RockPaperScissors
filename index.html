@@ -1,9 +1,97 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>Rock Paper Scissors</title>
+    <title>Rock Paper</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link type="text/JavaScript" src="app.js">
   </head>
   <body>
-    <h1> Rock Paper Siccissor</h1>
+    <div id="content-wrapper" class="container">
+      <!-- Application Body -->
+      <div id="app-body" class="row">
+
+        <!-- Main Stage -->
+        <div id="main-stage" class="col-md-7 stage">
+
+          <!-- scoreboard -->
+          <div id="scoreboard" class="row">
+            <div id="User-score" class="scoreboard-div col-sm-6">
+              <h3> <span id="player">User</span>: <span id="user-point">0</span>
+            </div>
+            <div id="bot-score" class="scoreboard-div col-sm-6">
+              <h3> Bot: <span id="bot-point">0</span>
+            </div>
+          </div>
+
+          <!-- Battle Stage -->
+          <div id="battlestage" class="row">
+            <div id="user-stage" class="col-md-6 battleground">
+              <div id="weapon-select">
+
+              </div>
+            </div>
+            <div id="bot-stage" class="col-md-6 battleground">
+              <div id="pc-select">
+              </div>
+              </div>
+          </div>
+
+          <!-- Battle Weapons -->
+          <div id="battleweapons" class="row">
+            <div  id="rock" class="weapon col-sm-4">
+              <img src="rock-256.png" width="32px">
+            </div>
+            <div  id="paper" class="weapon col-sm-4">
+              <img src="paper-256.png" width="32px">
+            </div>
+            <div  id="scissors" class="weapon col-sm-4">
+              <img src="scissors-3-256.png" width="32px">
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <!--Sidebar with the Stats -->
+        <div id="sidebar-stats" class="col-md-5 stage">
+          <!-- result-container -->
+          <div id="result-container" class="row">
+            <div id="game" class="col-sm-4">
+              <h3> Game <span id="game-count">0</span>:</h3>
+            </div>
+            <div  id="result-div" class="col-sm-8">
+              <span id="result">Results</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+
+
+    <footer>
+
+      <!-- Cridit for background Image-->
+      <div id="footer-div" class="container">
+      <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@danielleone?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Daniel Leone"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">Daniel Leone</span></a>
+    </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   </body>
 </html>
