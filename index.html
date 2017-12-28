@@ -35,13 +35,12 @@
           <div id="battlestage" class="row">
             <div id="user-stage" class="col-md-6 battleground">
               <div id="weapon-select">
-
               </div>
             </div>
             <div id="bot-stage" class="col-md-6 battleground">
               <div id="pc-select">
               </div>
-              </div>
+            </div>
           </div>
 
           <!-- Battle Weapons -->
@@ -56,11 +55,13 @@
               <img src="scissors-3-256.png" width="32px">
             </div>
           </div>
-
         </div>
+
+
+
         <!--Sidebar with the Stats -->
         <div id="sidebar-stats" class="col-md-5 stage">
-          <!-- result-container -->
+
           <div id="result-container" class="row">
             <div id="game" class="col-sm-4">
               <h3> Game <span id="game-count">0</span>:</h3>
@@ -69,16 +70,80 @@
               <span id="result">Results</span>
             </div>
           </div>
+
           <!-- percentage-container -->
           <div id="percentage-container" class="row">
-            <!-- User Stats -->
-            <div id="user-stats" class="col-sm-6">
-                <p>Rock Percentage: <span id="rock-percentatge">0</span>%</p>
-                <p>paper Percentage: <span id="paper-percentatge">0</span>%</p>
-                <p>scissors Percentage: <span id="scissors-percentatge">0</span>%</p>
+              <!-- User Stats -->
+              <div id="user-stats" class="col-sm-6 percent">
+                  <div class="row stat-label">
+                      <span>User</span>
+                  </div>
+                  <p>
+                      Rock Percentage: <span id="rock-percentatge">0</span>%
+                  </p>
+                  <div class="percent-contain">
+                      <div id="rock-percentatge-gauge">
+                      </div>
+                  </div>
+                  <p>
+                      paper Percentage: <span id="paper-percentatge">0</span>%
+                  </p>
+                  <div class="percent-contain">
+                      <div id="paper-percentatge-gauge">
+
+                      </div>
+                  </div>
+                  <p>
+                      scissors Percentage: <span id="scissors-percentatge">0</span>%
+                  </p>
+                  <div class="percent-contain">
+                      <div id="scissors-percentatge-gauge">
+
+                      </div>
+                  </div>
+              </div>
+              <!-- Bot Stats -->
+              <div id="user-stats" class="col-sm-6 percent">
+                  <div class="row stat-label">
+                      <span>Bot</span>
+                  </div>
+                  <p>
+                      Rock Percentage: <span id="bot-rock-percentatge">0</span>%
+                  </p>
+                  <div class="percent-contain">
+                      <div id="bot-rock-percentatge-gauge">
+
+                      </div>
+                  </div>
+                  <p>
+                      paper Percentage: <span id="bot-paper-percentatge">0</span>%
+                  </p>
+                  <div class="percent-contain">
+                      <div id="bot-paper-percentatge-gauge">
+
+                      </div>
+                  </div>
+                  <p>scissors Percentage: <span id="bot-scissors-percentatge">0</span>%
+                  </p>
+                  <div class="percent-contain">
+                      <div id="bot-scissors-percentatge-gauge">
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- LOGS-->
+          <div class="row">
+            <div id="logs">
+              <!-- result-container -->
+
+              <p> GAME LOGS </p>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="row" id="app-footer">
       </div>
     </div>
 
