@@ -73,7 +73,6 @@ $(document).ready(function() {
 				pcScore++;
 			}
 
-      alert(percent(botRock));
 		}
     //fucntion for percentage
 
@@ -81,6 +80,19 @@ $(document).ready(function() {
       return Math.floor(number / count * 100)
     }
 
+
+    //fucntion for percentage progress bar
+    function percentProgress(id, percentageAmount, color){
+      document.getElementById(id).style.width = percentageAmount + "%";
+      document.getElementById(id).style.backgroundColor = color;
+    }
+
+    percentProgress("rock-percentatge-gauge", percent(userRock), "#F900CA");
+    percentProgress("paper-percentatge-gauge", percent(userPaper), "#11EBB5");
+    percentProgress("scissors-percentatge-gauge", percent(userScissors), "#5DE0F6");
+    percentProgress("bot-rock-percentatge-gauge", percent(botRock), "#F900CA");
+    percentProgress("bot-paper-percentatge-gauge", percent(botPaper), "#11EBB5");
+    percentProgress("bot-scissors-percentatge-gauge", percent(botScissors), "#5DE0F6");
 		// Call the compare function and pass userChoice and pcChoice as arguments.
 		compare(userChoice, pcChoice);
 		// Calculates the Percentage of the user selected Weapons and Prints it out to the screen

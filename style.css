@@ -130,7 +130,7 @@ div#pc-select {
 .percent-contain {
     width: 100%;
     background-color: #fff;
-    height: 7px;
+    height: 10px;
     overflow: hidden;
     margin-bottom: 10px;
     border-radius: 6px;
@@ -158,4 +158,9 @@ span#result {
     left: 72px;
     font-size: 21px;
     margin-bottom: 6px;
+}
+
+.percent-contain div{
+  height:12px;
+
 }
