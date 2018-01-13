@@ -27,22 +27,22 @@ document.getElementById('player').innerHTML = userName;
 $(document).ready(function() {
 	// IF ROCK is clicked, rock gets display on the main-stage
 	$("#rock").click(function() {
-		$("#weapon-select").css("background-image", "url(rock-256.png)");
+		$("#weapon-select").css("background-image", "url(Rock.png)");
 		userRock++;
 		userWeapon = "rock";
-		$("#pc-select").css("background-image", "none");
+	//	$("#pc-select").css("background-image", "none");
 	});
 	$("#paper").click(function() {
-		$("#weapon-select").css("background-image", "url(paper-256.png)");
+		$("#weapon-select").css("background-image", "url(paper.png)");
 		userPaper++;
 		userWeapon = "paper";
-		$("#pc-select").css("background-image", "none");
+	//	$("#pc-select").css("background-image", "none");
 	});
 	$("#scissors").click(function() {
-		$("#weapon-select").css("background-image", "url(scissors-3-256.png)");
+		$("#weapon-select").css("background-image", "url(scissors_left.png)");
 		userScissors++;
 		userWeapon = "scissors";
-		$("#pc-select").css("background-image", "none");
+	//	$("#pc-select").css("background-image", "none");
 	});
 	// Function to trigger action from Bot
 	function shoot(userChoice) {
@@ -51,13 +51,13 @@ $(document).ready(function() {
 		if (pcChoice < 0.33) {
 			pcChoice = "rock";
       botRock++;
-			$("#pc-select").css("background-image", "url(rock-256.png)")
+			$("#pc-select").css("background-image", "url(Rock_right.png)")
 		} else if (pcChoice < 0.66) {
 			pcChoice = "paper";
       botPaper++;
-			$("#pc-select").css("background-image", "url(paper-256.png)");
+			$("#pc-select").css("background-image", "url(paper_right.png)");
 		} else {
-			$("#pc-select").css("background-image", "url(scissors-3-256.png)");
+			$("#pc-select").css("background-image", "url(scissors_right.png)");
 			pcChoice = "scissors";
       botScissors++;
 		}
@@ -85,7 +85,12 @@ $(document).ready(function() {
     function percentProgress(id, percentageAmount, color){
       document.getElementById(id).style.width = percentageAmount + "%";
       document.getElementById(id).style.backgroundColor = color;
-    }
+		}
+		
+		// Function for sound 
+
+
+	
 
     percentProgress("rock-percentatge-gauge", percent(userRock), "#F900CA");
     percentProgress("paper-percentatge-gauge", percent(userPaper), "#11EBB5");
