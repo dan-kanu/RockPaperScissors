@@ -30,21 +30,25 @@ $(document).ready(function() {
 		$("#weapon-select").css("background-image", "url(Rock.png)");
 		userRock++;
 		userWeapon = "rock";
-	//	$("#pc-select").css("background-image", "none");
+
 	});
 	$("#paper").click(function() {
 		$("#weapon-select").css("background-image", "url(paper.png)");
 		userPaper++;
 		userWeapon = "paper";
-	//	$("#pc-select").css("background-image", "none");
+
 	});
 	$("#scissors").click(function() {
 		$("#weapon-select").css("background-image", "url(scissors_left.png)");
 		userScissors++;
 		userWeapon = "scissors";
-	//	$("#pc-select").css("background-image", "none");
+
 	});
+	
+	
 	// Function to trigger action from Bot
+
+
 	function shoot(userChoice) {
 		count++; // Increaments the game count
 		pcChoice = Math.random(); //Generates random number
@@ -65,12 +69,15 @@ $(document).ready(function() {
 		function compare(choice1, choice2) {
 			if (choice1 === choice2) {
 				result = "Draw";
+				pLog.push("Game" + count + ":  " + result + "<br>");
 			} else if (choice1 === "paper" && choice2 === "rock" || choice1 === "rock" && choice2 === "scissors" || choice1 === "scissors" && choice2 === "paper") {
 				result = userName + " Wins!";
 				userScore++;
+				pLog.push("Game" + count + ":  " + result + "<br>");
 			} else {
 				result = "Bot Wins";
 				pcScore++;
+				pLog.push("Game" + count + ":  " + result + "<br>");
 			}
 
 		}
@@ -87,6 +94,7 @@ $(document).ready(function() {
       document.getElementById(id).style.backgroundColor = color;
 		}
 		
+
 		// Function for sound 
 
 
@@ -118,6 +126,7 @@ $(document).ready(function() {
 		document.getElementById('bot-scissors-percentatge').innerHTML = percent(botScissors);
 
 		// Prints out info to the screen
+		document.getElementById('logs').innerHTML = pLog + "<br>"; /// Logs
 		document.getElementById('result').innerHTML = result; // Prints out result
 		document.getElementById('game-count').innerHTML = count; // prints out the Game count
 		document.getElementById('bot-point').innerHTML = pcScore; // Prints out the BOT SCORE
